@@ -7,7 +7,7 @@ class Solution(object):
         """
         a = Counter(arr) # Time: O(n), Space: O(n)
 
-        sorted_list = sorted(arr, key=lambda x:(a[x],x)) # Time: O(n log n)
+        sorted_list = sorted(arr, key=lambda x:(a[x],x)) # Time: O(n log n) -- Insertion sort for smaller array, merge sort for bigger array
 
         print(sorted_list)
 
@@ -19,4 +19,5 @@ class Solution(object):
 #Time complexity: O(n logn)
 
 #Space Complexity: O(n)
-        
+
+#Better version:
