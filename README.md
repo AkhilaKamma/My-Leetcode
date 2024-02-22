@@ -1,6 +1,8 @@
 # My-Leetcode
-**Recersive approach to generate all combinations to get the target number**
+to gneerate the template : https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks
 
+**Recersive approach to generate all combinations to get the target number**
+```
 def combination_sum_helper(nums, target, index, path, result):
     if target == 0:
         result.append(path)
@@ -9,8 +11,11 @@ def combination_sum_helper(nums, target, index, path, result):
         return
     for i in range(index, len(nums)):
         combination_sum_helper(nums, target - nums[i], i + 1, path + [nums[i]], result)
+```
       
 **Recersive approach to generate all combinations to get the target number by repeating the given number any number of times**
+```
+
 def combination_sum_helper(nums, target, index, path, result):
     if target == 0:
         result.append(path)
@@ -19,8 +24,7 @@ def combination_sum_helper(nums, target, index, path, result):
         return
     for i in range(index, len(nums)):
         combination_sum_helper(nums, target - nums[i], i, path + [nums[i]], result)
-
-        
+      
 def combination_sum(nums, target):
     result = []
     nums.sort()
@@ -28,6 +32,7 @@ def combination_sum(nums, target):
     return result
     
 result = combination_sum(per_list, n)
+```
 
 **Binary search algorithm to find Perfect squares or square root of a number - O(logn)**
 ```
