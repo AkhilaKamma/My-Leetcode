@@ -1,4 +1,4 @@
-# [My-Leetcode](https://leetcode.com/akhila_kamma/) - 
+# [My-Leetcode](https://leetcode.com/akhila_kamma/) 
 
 **Recersive approach to generate all combinations to get the target number**
 ```
