@@ -30,6 +30,8 @@ def combination_sum(nums, target):
 result = combination_sum(per_list, n)
 
 **Binary search algorithm to find Perfect squares or square root of a number - O(logn)**
+
+
 def isPerfectSquare(num):
     l = 0
     r = num
