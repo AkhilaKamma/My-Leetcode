@@ -1,41 +1,22 @@
-class Solution(object):
-
-    def numSquares(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
-        def isPerfectSquare(num):
-            l = 0
-            r = num
-            while l <= r:
-                mid = (l+r) // 2
-                if mid * mid == num:
-                    return True
-                elif mid * mid > num:
-                    r = mid - 1
-                else:
-                    l = mid + 1
-            return False
-
-        per_list = []
-        for i in range(1,n):
-            if isPerfectSquare(i):
-                per_list.append(i)
-        print(per_list)
-
-        minCount = 10**4
-        target = n
-        for i in per_list:
-            if i % n == 0:
-                return min(minCount, int(i/n))
-            else:
-                target = target - i
-                count = count + 1
-                if target == 0:
-                    return min(minCount,count)
-        return False
-
-
-
+class Solution:
+    def numSquares(self, n: int) -> int:
         
+        memo = {}
+    
+        def numSquaresHelper(n, memo):
+            if n == 0:
+                return 0
+            if n in memo:
+                return memo[n]
+            
+            min_squares = float('inf')
+            for i in range(1, int(math.sqrt(n)) + 1):
+                square = i * i
+                if square > n:
+                    break
+                min_squares = min(min_squares, 1 + numSquaresHelper(n - square, memo))
+            
+            memo[n] = min_squares
+            return min_squares
+        
+        return numSquaresHelper(n, memo)
