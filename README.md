@@ -1,5 +1,4 @@
-# My-Leetcode
-to gneerate the template : https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks
+# [My-Leetcode](https://leetcode.com/akhila_kamma/) - 
 
 **Recersive approach to generate all combinations to get the target number**
 ```
