@@ -68,6 +68,8 @@ def maxSubArray(self, nums: List[int]) -> int:
             max_sum = max(max_sum, current_sum)
         return max_sum
 ```
+**Bellman-Fold algorithm**
+The Bellman–Ford algorithm is an algorithm that computes shortest paths from a single source vertex to all of the other vertices in a weighted digraph
 
 
 
